@@ -1,10 +1,25 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: maintain-PlatoUtils
 Version: 0.1
-Summary: UNKNOWN
-Home-page: UNKNOWN
-Author: UNKNOWN
-Author-email: UNKNOWN
-License: UNKNOWN
-Description: UNKNOWN
+Summary: 运营PlatoDB的工具
+Home-page: https://github.com/Timaos123/maintian_PlatoUtils.git
+Author: Example Author
+Author-email: 201436009@uibe.edu.cn
+License: MIT
 Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# maintian_PlatoUtils
+
+安装方式
+
+```
+python setup.py install --user
+```
+
+

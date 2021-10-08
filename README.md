@@ -3,5 +3,14 @@
 安装方式
 
 ```
+pip install maintainPlatoUtils
 python setup.py install --user
 ```
+
+每次更新包之后记得：
+```
+python -m build
+twine upload dist/*
+```
+
+文件```.pypirc```置于C:/用户/<用户名>下才能使用

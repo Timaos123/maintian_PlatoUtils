@@ -5,7 +5,7 @@ NAME="maintain_PlatoUtils"
 VERSION="0.1"
 PY_MODULES=["maintain_PlatoUtils"]
 
-with open("README.md", "r") as fh:
+with open("README.md", "r",encoding="utf8") as fh:
     long_description = fh.read()
 
 setup(
