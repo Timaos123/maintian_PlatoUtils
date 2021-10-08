@@ -54,7 +54,7 @@ def delVertex(gClient,sysIdList,delRel=True):
                     delReverseGroupStr=",".join(["{}->{}".format(tailSysIdItem,srcSysIdItem) for tailSysIdItem in relTailSysIdList])
                     delGroupStr=",".join([delOrderGroupStr,delReverseGroupStr])
                     gClient.execute_query("DELETE EDGE {} {}".format(relItem,delGroupStr))
-    for batchI in range(0,len(sysIdList),50):
+    for batchI in range(0,len(sysIdList),50): 
         delVerGroupStr=",".join([str(sysIdItem) for sysIdItem in sysIdList[batchI,batchI+50]])
         delReq=gClient.execute_query("DELETE VERTEX {}".format(delVerGroupStr))
     return delReq
