@@ -7,7 +7,7 @@ pip install maintainPlatoUtils
 python setup.py install --user
 ```
 
-每次更新包之后记得：
+每次更新包之后记得删除原dist内的老包，再运行：
 ```
 python -m build
 twine upload dist/*
