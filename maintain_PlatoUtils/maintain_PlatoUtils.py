@@ -59,3 +59,13 @@ def delVertex(gClient,sysIdList,delRel=True):
         delReq=gClient.execute_query("DELETE VERTEX {}".format(delVerGroupStr))
     return delReq
                 
+def existTag(nodeType,nodeIdAttr,nodeName,gClient):
+    '''查看nodeType的nodeIdAttr为nodeName的节点是否在gClient中（gClient提前设定好图数据库）'''
+    searchTagDf=wrapNebula2Df(gClient.execute_query("LOOKUP ON {nodeType} WHERE {nodeType}.{nodeIdAttr}=='{nodeName}'|LIMIT 1".format(
+        nodeType=nodeType,
+        nodeIdAttr=nodeIdAttr,
+        nodeName=nodeName
+    )))
+    if searchTagDf.shape[0]>0:
+        return True
+    return False
