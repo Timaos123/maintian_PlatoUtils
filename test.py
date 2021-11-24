@@ -74,4 +74,4 @@ if __name__=="__main__":
     transferBetweenPlato(srcGHost,srcGPort,srcGUser,srcGPassword,srcGdbName,
                          tgtGHost,tgtGPort,tgtGUser,tgtGPassword,tgtGdbName,edgeTypeList=edgeTypeList,
                          srcVertexKeynameDict=srcVertexKeynameDict,csv2platoDTypeDict=csv2platoDTypeDict,
-                         batchSize=64,projectName="tryTransfer",platoAPIIP="",platoAPIPort=8083)
+                         batchSize=64,projectName="tryTransfer",platoAPIIP="",platoAPIPort=8083) 
