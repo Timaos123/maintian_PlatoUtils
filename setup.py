@@ -2,7 +2,7 @@ import setuptools
 from setuptools import setup
 
 NAME="maintain_PlatoUtils"
-VERSION="0.1.2.8"
+VERSION="0.1.2.19"
 PY_MODULES=["maintain_PlatoUtils"]
 
 with open("README.md", "r",encoding="utf8") as fh:
