@@ -115,7 +115,7 @@ def remakeRawSchema(rawSchemaJson,csvFolder="",gClient=None):
     
     return rawSchemaJson
 
-def uploadFile(filepath,platoUrl="http://9.135.95.249:7001"):
+def uploadFile(filepath,platoUrl="http://:7001"):
 
     url = platoUrl+"/api/files/upload"
 
@@ -151,7 +151,7 @@ def uploadFile(filepath,platoUrl="http://9.135.95.249:7001"):
         'Origin': platoUrl,
         'Referer': platoUrl+'/import',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-        'Cookie': '_ga=GA1.1.152281212.1620638476; _gid=GA1.1.1165891708.1630551473; x-client-ssid=17ba9820824-91dabf2075180054237c14cb90d316c04da7064c; x-host-key-front=17ba982086f-036361ce77df67838d947d8c522a9c2ecc4fe227; x-host-key-ngn=17ba9820824-8f6fc182b3bf107c56e7f4e98120e8d99fecabb3; Hm_lvt_b9cb5b394fd669583c13f8975ca64ff0=1628591085,1629950390,1630551473,1630636476; locale=ZH_CN; nsid=f4a441a23dae744c54b8f96960a04ee2; nh=10.99.218.40:8080; nu=root; np=nebula; Hm_lpvt_b9cb5b394fd669583c13f8975ca64ff0=1630636498; _gat_gtag_UA_60523578_4=1',
+        'Cookie': '_ga=GA1.1.152281212.1620638476; _gid=GA1.1.1165891708.1630551473; x-client-ssid=17ba9820824-91dabf2075180054237c14cb90d316c04da7064c; x-host-key-front=17ba982086f-036361ce77df67838d947d8c522a9c2ecc4fe227; x-host-key-ngn=17ba9820824-8f6fc182b3bf107c56e7f4e98120e8d99fecabb3; Hm_lvt_b9cb5b394fd669583c13f8975ca64ff0=1628591085,1629950390,1630551473,1630636476; locale=ZH_CN; nsid=f4a441a23dae744c54b8f96960a04ee2; nh=:8080; nu=root; np=nebula; Hm_lpvt_b9cb5b394fd669583c13f8975ca64ff0=1630636498; _gat_gtag_UA_60523578_4=1',
         'Content-type': 'multipart/form-data; boundary={}'.format(boundary)
     }
 
@@ -162,8 +162,8 @@ def uploadFile(filepath,platoUrl="http://9.135.95.249:7001"):
 if __name__=="__main__":
     
     dataFolder="csv2platodb/attr2Vertex_1629250000"
-    platoUrl="http://9.135.95.249:7001"
-    # platoUrl="http://10.99.218.40:8081"
+    platoUrl="http://:7001"
+    # platoUrl="http://:8081"
     
     uploadFolder(dataFolder,platoUrl)
     

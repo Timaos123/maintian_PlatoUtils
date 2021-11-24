@@ -79,7 +79,7 @@ def existTag(nodeType,nodeIdAttr,nodeName,gClient):
 def transferBetweenPlato(srcGHost,srcGPort,srcGUser,srcGPassword,srcGdbName,
                          tgtGHost,tgtGPort,tgtGUser,tgtGPassword,tgtGdbName,edgeTypeList=[],
                          srcVertexKeynameDict={"srcNodeType":"srcNodeIdAttr"},csv2platoDTypeDict={"srcNodeIdAttr":"string"},
-                         batchSize=64,projectName="",platoIP="9.135.95.249",platoPort=8083):
+                         batchSize=64,projectName="",platoIP="",platoPort=8083):
     
     srcConnection_pool = ConnectionPool(srcGHost, srcGPort,network_timeout=300000)
     srcClient = GraphClient(srcConnection_pool)

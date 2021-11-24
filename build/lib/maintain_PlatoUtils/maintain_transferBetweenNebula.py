@@ -12,7 +12,7 @@ import maintain_csv2platodb_B_submitSchema
 import maintain_csv2platodb_C_import
 
 if __name__=="__main__":
-    srcGHost="9.135.95.249"
+    srcGHost=""
     srcGPort=13708
     srcGUser="root"
     srcGPassword="nebula"
@@ -23,7 +23,7 @@ if __name__=="__main__":
     }
     edgeTypeList=["belongTo"]
 
-    tgtGHost="9.135.95.249"
+    tgtGHost=""
     tgtGPort=13708
     tgtGUser="root"
     tgtGPassword="nebula"
@@ -211,14 +211,14 @@ if __name__=="__main__":
     esHostConf=esHostDict[env]
 
     gdbHostDict={
-        "test":["9.135.95.249",13708,"root","nebula"],
-        "product":["10.99.218.40",8080,"root","nebula"]
+        "test":["",13708,"root","nebula"],
+        "product":["",8080,"root","nebula"]
     }
     gdbHost=gdbHostDict[env]
 
     gdbAPIDict={
-        "test":"http://9.135.95.249:7001",
-        "product":"http://10.99.218.40:8081"
+        "test":"http://:7001",
+        "product":"http://:8081"
     }
     gAPIUrl=gdbAPIDict[env]
 

@@ -12,7 +12,7 @@ import maintain_PlatoUtils
 
 if __name__=="__main__":
     # # test
-    # gHost="9.135.95.249"
+    # gHost=""
     # platoAPIPort=7001
     # gPort=13708
     # gUser="root"
@@ -21,7 +21,7 @@ if __name__=="__main__":
     # gSpace="for_kg_search"
 
     # product
-    # gHost="10.99.218.40"
+    # gHost=""
     # platoAPIPort=8081
     # gPort=8080
     # gUser="root"
@@ -49,7 +49,7 @@ if __name__=="__main__":
     # end=time.time()
     # print(end-start)
     
-    srcGHost="9.135.95.249"
+    srcGHost=""
     srcGPort=13708
     srcGUser="root"
     srcGPassword="nebula"
@@ -60,7 +60,7 @@ if __name__=="__main__":
     }
     edgeTypeList=["belongTo"]
 
-    tgtGHost="9.135.95.249"
+    tgtGHost=""
     tgtGPort=13708
     tgtGUser="root"
     tgtGPassword="nebula"
@@ -74,4 +74,4 @@ if __name__=="__main__":
     transferBetweenPlato(srcGHost,srcGPort,srcGUser,srcGPassword,srcGdbName,
                          tgtGHost,tgtGPort,tgtGUser,tgtGPassword,tgtGdbName,edgeTypeList=edgeTypeList,
                          srcVertexKeynameDict=srcVertexKeynameDict,csv2platoDTypeDict=csv2platoDTypeDict,
-                         batchSize=64,projectName="tryTransfer",platoAPIIP="9.135.95.249",platoAPIPort=8083)
+                         batchSize=64,projectName="tryTransfer",platoAPIIP="",platoAPIPort=8083)

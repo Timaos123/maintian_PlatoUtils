@@ -196,7 +196,7 @@ def createSchemaFromSchemaJson(schemaJson,graphClient):
     return createTagErrCode,createTagIndexErrCode,rebuildTagIndexErrCode,createEdgeErrCode
             
 
-def submitSchema(schemaJson,gUrl="http://9.135.95.249:7001"):
+def submitSchema(schemaJson,gUrl="http://:7001"):
 
     url = gUrl+"/api-import/submit"
 
@@ -206,10 +206,10 @@ def submitSchema(schemaJson,gUrl="http://9.135.95.249:7001"):
         'Accept': 'application/json, text/plain, */*',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 Edg/92.0.902.62',
         'Content-Type': 'application/json',
-        'Origin': 'http://9.135.95.249:7001',
-        'Referer': 'http://9.135.95.249:7001/import',
+        'Origin': 'http://:7001',
+        'Referer': 'http://:7001/import',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-        'Cookie': '_ga=GA1.1.599074290.1616395720; locale=ZH_CN; Hm_lvt_b9cb5b394fd669583c13f8975ca64ff0=1627524967,1627612772,1627879099,1627959086; nsid=de94b8d118e557ff3e54875946395226; nh=9.135.95.249:13708; nu=root; np=nebula; _gid=GA1.1.1256907028.1628059656; Hm_lpvt_b9cb5b394fd669583c13f8975ca64ff0=1628063018'
+        'Cookie': '_ga=GA1.1.599074290.1616395720; locale=ZH_CN; Hm_lvt_b9cb5b394fd669583c13f8975ca64ff0=1627524967,1627612772,1627879099,1627959086; nsid=de94b8d118e557ff3e54875946395226; nh=:13708; nu=root; np=nebula; _gid=GA1.1.1256907028.1628059656; Hm_lpvt_b9cb5b394fd669583c13f8975ca64ff0=1628063018'
     }
 
     response = requests.request("POST", url, headers=headers, data=data)
@@ -221,22 +221,22 @@ def submitSchema(schemaJson,gUrl="http://9.135.95.249:7001"):
 if __name__=="__main__":
     
     # test
-    ghost="9.135.95.249"
+    ghost=""
     gport=13708
     guser="root"
     gpassword="nebula"
     gspace="post_skill_school_ianxu"
-    gAPIUrl="http://9.135.95.249:7001"
+    gAPIUrl="http://:7001"
 
     schemaPath="csv2platodb/attr2Vertex_1629250000"
     
     # product
-    # ghost="10.99.218.40"
+    # ghost=""
     # gport=8080
     # guser="root"
     # gpassword="nebula"
     # gspace="testImport"
-    # gUrl="http://10.99.218.40:8081"
+    # gUrl="http://:8081"
     
     '''
     uploadSchema形状：
