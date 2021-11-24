@@ -205,7 +205,7 @@ if __name__=="__main__":
     seachFrameworkIp=seachFrameworkIpDict[env]
 
     esHostDict={
-        "test":["9.134.92.196",9200,"elastic","devcloud@123"],
+        "test":["",9200,"elastic","devcloud@123"],
         "product":["http://es.hrsdc.oa.com",80,"aicenter","aicenter@123"]
     }
     esHostConf=esHostDict[env]
